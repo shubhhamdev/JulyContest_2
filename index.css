@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Light gray background color */
+  }
+  
+  header {
+    background-color: #00ffcc; /* Primary blue color */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    color: rgb(56, 16, 255); /* White text color for the heading */
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .search {
+    margin-top: 10px;
+  }
+  
+  .search input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .filters {
+    margin-top: 20px;
+  }
+  
+  .filter-btn {
+    margin: 5px;
+    padding: 8px 16px; /* Slightly larger padding */
+    border: none;
+    border-radius: 5px;
+    background-color: #0056b3; /* Darker blue color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition on hover */
+  }
+  
+  .filter-btn:hover {
+    background-color: #003c80; /* Darker blue color on hover */
+  }
+  
+  .rating-filter {
+    margin-top: 10px;
+  }
+  
+  .rating-filter label {
+    margin-right: 15px; /* Add some space between the radio buttons and label text */
+  }
+  
+  .rating-filter input[type="radio"] {
+    margin-right: 5px; /* Add some space between the radio buttons */
+  }
+  
+  #recipeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .recipe-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    width: 250px;
+    padding: 10px;
+    background-color: #fff; /* White background for recipe cards */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly on hover */
+  }
+  
+  .recipe-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0; /* Round the top corners */
+  }
+  
+  .recipe-card h3 {
+    margin-top: 8px; /* Slightly reduce the top margin */
+    color: #04ff00; /* Primary blue color for the recipe names */
+  }
+  
+  .recipe-card p {
+    margin: 5px 0; /* Add some space between elements */
+  }
+  
+  .like-btn {
+    cursor: pointer;
+    color: red;
+    font-size: 20px;
+  }
+  
+  .drawer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: none;
+  }
+  
+  #sidebar {
+    width: 0;
+    overflow: hidden;
+  }
+  
+  .drawer-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #007bff; /* Primary blue color for the drawer icon */
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .filter-btn {
+      display: none;
+    }
+  
+    .rating-filter {
+      display: none;
+    }
+  
+    .drawer-btn {
+      display: block;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+  
+    .drawer {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100%;
+      overflow-y: auto;
+      z-index: 1;
+      background-color: #fff; /* White background for the drawer */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      padding: 20px;
+    }
+  
+    .drawer.active {
+      right: 0;
+    }
+  }
+  

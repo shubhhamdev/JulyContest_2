@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grab & Eat</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Grab & Eat</h1>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search recipes...">
+        </div>
+        <div class="filters">
+            <button class="filter-btn" id="showAllBtn">Show All</button>
+            <button class="filter-btn" id="showVegBtn">Show Only Veg</button>
+            <button class="filter-btn" id="showNonVegBtn">Show Only Non-Veg</button>
+        </div>
+        <div class="rating-filter">
+            <label>
+                <input type="radio" name="ratingFilter" value="above4.5" id="above4.5"> Rating Above 4.5
+            </label>
+            <label>
+                <input type="radio" name="ratingFilter" value="below4.0" id="below4.0"> Rating Below 4.0
+            </label>
+        </div>
+    </header>
+    <main id="recipeContainer"></main>
+    <div class="drawer">
+        <!-- Drawer content for mobile view goes here (optional) -->
+    </div>
+    <div class="drawer-btn">&#9776;</div>
+    <script src="index.js"></script>
+</body>
+</html>
